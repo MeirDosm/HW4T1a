@@ -1,0 +1,187 @@
+#include <iostream>
+#include <stdio.h>
+#include <math.h>
+using namespace std;
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char** argv) {
+	
+	start:
+		cout << "Vvedite nomer zadaniya: ";
+		int n=0;
+		cin >> n;
+		
+		if (n==1)
+		{
+			int i;
+	
+	        for (i=1; i<=8;i++)
+	        {
+		        cout << "2," << i << endl;
+	        }
+	    
+	        goto start;
+		}
+		
+		if (n==2)
+		{
+			int i;
+	        float price=0;
+	        float y =0;
+	
+	        cout << "Vvedite stoimost' 1 kg konfet: " << endl;
+	        cin >> price;
+	        cout << endl;
+	
+	        for (i=100;i<=2000;i=i+100)
+	        {
+		
+		        y=i*(0.1*price);
+		        cout << i << " gramm konfet stoit: " << y << endl;
+	        }
+	        
+	        goto start;
+		}
+		
+		if (n==3)
+		{
+				int i;
+	            int Sa=0;
+	            int Sb=0;
+	            int Sc=0;
+	            int Sd=0;
+	
+	            for (i=100;i<=500;++i)
+	            {
+		
+	            	Sa += i;
+		
+	            }
+	
+	            cout << Sa << endl;
+	
+	            int a;
+	            cout << "Vvedite a <= 500: " << endl;
+	            cin >> a;
+	
+	
+	            for (i=a;i<=500;++i)
+	            {
+		
+		            Sb += i;
+		
+	            }
+	
+	            cout << Sb << endl;
+	
+	            int b;
+	            cout << "Vvedite b >= 10: " << endl;
+	            cin >> b;
+	
+	
+	            for (i=-10;i<=b;++i)
+	            {
+		
+		            Sc +=i;
+		
+	            }
+	
+	            cout << Sc << endl;
+	
+	            cout << "Vvedite a i b , prichem b>=a: " << endl;
+	            cin >> a;
+	            cin >> b;
+	
+	            for (i=a; i<=b; ++i)
+	            {
+		
+		            Sd += i;
+		
+	            }
+	
+	            cout << Sd << endl;
+	
+	            goto start;
+		}
+		
+		if (n==4)
+		{
+			int i;
+	        float Sa=1000;
+	        float Sb=0;
+	        for (i=2;i<=100;i++)
+	        {
+	        	if (i%2==0)
+		        {
+			        Sa-=(1000/i);
+		        }
+		        else
+		        {
+			        Sa+=(1000/i);
+			
+		        }
+		
+	    }
+	
+	
+	        cout << "Muzhchina budet nahoditsya na rasstoyanie ot doma: " << Sa << " km." << endl;
+	
+	        for (i=1;i<=100;i++)
+	        {
+	    	    Sb+=1000/i;
+			
+		
+		
+	        }
+	
+	        cout << "Obshii put' kotoryi proidet muzhchina raven: " << Sb << " km." << endl;
+	    
+	        goto start;
+		}
+		
+		if (n==5)
+		{
+			int k=0;
+	        int i;
+	        int n;
+	        int a[19];
+	
+	        cout << "Vvedite chislo n < 20: " << endl;
+	        cin >> n;
+	        cout << "Vvedite posledovatel'nost' iz " << n << " celyh chisel: " << endl;
+	
+	
+	        for (i=0;i<n;i++)
+	        {
+		
+		        cin >> a[i];
+	        }
+	
+	        for (i=0;i<n-1;i++)
+	        {
+	
+		        if (a[i]<a[i+1])
+		        {
+			        k=1;
+			
+		        }
+		        else
+		        {
+			        k=0;
+			        break;
+		        }
+            }
+            if (k)
+            {
+    	        cout << "Posledovatel'nost' vozrastayushaya. " << endl;
+	        }
+	        else
+	        {
+		        cout << "Posledovatel'nost' ne vozrastayushaya. " << endl;
+	        }
+	        
+	        goto start;
+		}
+	return 0;
+}
